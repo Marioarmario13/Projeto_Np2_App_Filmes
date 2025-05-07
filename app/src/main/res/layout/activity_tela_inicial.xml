@@ -1,0 +1,111 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#010E1A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Imagem de capa -->
+
+        <!-- Título Recomendacoes -->
+
+        <!-- Texto recomendações -->
+        <ImageView
+            android:id="@+id/imageCapa"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginBottom="14dp"
+            android:alpha="0.7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/filme01" />
+
+        <ImageView
+            android:id="@+id/logoUniFlix"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-60dp"
+            android:layout_marginBottom="-30dp"
+            android:contentDescription="Logo UniFlix"
+            android:src="@drawable/logotipo" />
+
+        <TextView
+            android:id="@+id/textRecomendacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Recomendações"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Grade de imagens filmes -->
+        <LinearLayout
+            android:id="@+id/layoutRecomendacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/capitaoamerica"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:background="#F1C40F"
+                android:scaleType="centerCrop"
+                android:src="@drawable/filme02" />
+
+            <ImageView
+                android:id="@+id/nosferatu"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:background="#F1C40F"
+                android:scaleType="centerCrop"
+                android:src="@drawable/filme04" />
+
+            <ImageView
+                android:id="@+id/chicobento"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:background="#F1C40F"
+                android:scaleType="centerCrop"
+                android:src="@drawable/filme03" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewDireitos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="© 2025 - Todos os direitos reservados"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="0dp"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</ScrollView>
+
+    <!-- Tarefas Pendentes
+         - Mexer na proporção das imagens
+         - Spinner
+         - Funcionalidade diferente (Usuario e Senha - Slide) -->

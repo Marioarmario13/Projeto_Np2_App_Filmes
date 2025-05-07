@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="#010B1f">
+
+    <!-- Imagem -->
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="258dp"
+        android:layout_height="247dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/logotipo" />
+
+    <!-- Texto Secundário -->
+
+    <TextView
+        android:id="@+id/textViewSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Filmes, séries e muito mais !"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginTop="-123dp"
+        />
+
+    <!-- E-mail -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:layout_marginTop="50dp"
+        />
+
+
+    <!-- Senha -->
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#888888" />
+
+
+    <!-- Botão de login -->
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F1C40F"
+        android:padding="12dp"
+        android:text="Entrar"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textViewDireitos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© 2025 - Todos os direitos reservados"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="0dp"
+        android:textSize="12sp"/>
+
+</LinearLayout>
