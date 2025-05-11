@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,16 +17,19 @@
 
             <!-- Capa do filme  -->
             <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="450dp"
-                android:clipToOutline="true"
-                android:background="@drawable/filme01">
+                android:layout_width="400dp"
+                android:layout_height="500dp"
+                android:clipToOutline="true">
 
-                <ImageView
-                    android:id="@+id/imageView"
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image007"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
+                    android:layout_height="500dp"
+                    android:layout_marginBottom="4dp"
+                    android:alpha="0.7"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/filme01"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
             </FrameLayout>
 
@@ -48,6 +50,18 @@
                 android:textSize="14sp" />
         </RelativeLayout>
 
+        <!-- Nome do Filme -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="007 - Sem Tempo Para Morrer"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="4dp"
+            android:lineHeight="30dp"/>
+
         <!-- Tags -->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -64,6 +78,7 @@
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="4dp"
                 android:textSize="13sp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="8dp"
                 android:textStyle="bold"/>
 
@@ -73,6 +88,7 @@
                 android:text="1h 20m"
                 android:textColor="#000000"
                 android:background="@drawable/tag01"
+                android:layout_marginTop="5dp"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="4dp"
                 android:textSize="13sp"
@@ -98,5 +114,16 @@
             android:lineSpacingExtra="4dp"
             android:justificationMode="inter_word"
             android:text="Em 007 - Sem Tempo Para Morrer, depois de sair do serviço ativo da MI6, James Bond (Daniel Craig) vive tranquilamente na Jamaica, mas como nem tudo dura pouco, a vida do espião 007 é agitada mais uma vez. Felix Leiter (Jeffrey Wright) é um velho amigo da CIA que procura o inglês para um pequeno favor de ajudá-lo em uma missão secreta."/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar ao menu"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#F1C40F"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
     </LinearLayout>
 </ScrollView>

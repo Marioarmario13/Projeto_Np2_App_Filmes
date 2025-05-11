@@ -1,6 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#010E1A"
     android:padding="16dp">
 
@@ -10,19 +11,20 @@
         android:orientation="vertical">
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+        <FrameLayout
+            android:layout_width="400dp"
+            android:layout_height="500dp"
+            android:clipToOutline="true">
 
-            <!-- Capa do filme  -->
-            <ImageView
-                android:id="@+id/imgCapa"
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imagecapitaoamerica"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="500dp"
+                android:layout_marginBottom="4dp"
+                android:alpha="0.7"
                 android:scaleType="centerCrop"
                 android:src="@drawable/filme02"
-                android:alpha="0.8"/>
+                app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
             <!-- Nota IMDB -->
             <TextView
@@ -39,8 +41,18 @@
                 android:layout_margin="12dp"
                 android:background="@drawable/tag01"
                 android:textSize="14sp" />
-        </RelativeLayout>
+        </FrameLayout> <!-- Fechamento correto do FrameLayout -->
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capitão América: Admirável Mundo Novo"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="4dp"
+            android:lineHeight="30dp" />
         <!-- Tags -->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -90,6 +102,16 @@
             android:textSize="14sp"
             android:lineSpacingExtra="4dp"
             android:justificationMode="inter_word"
-            android:text="Capitão América: Admirável Mundo Novo é o próximo filme do famoso herói da Marvel. Desta vez, o filme dá continuidade à minissérie de televisão Falcão e o Soldado Invernal, onde o escudo está nas mãos de Sam Wilson (Anthony Mackie), após Steve Rogers (Chris Evans) o entregar em Vingadores: Ultimato. Durante a série, Sam aceita seu dever como o novo Capitão América ao lado de Bucky Barnes (Sebastian Stan). "/>
+            android:text="Capitão América: Admirável Mundo Novo é o próximo filme do famoso herói da Marvel. Desta vez, o filme dá continuidade à minissérie de televisão Falcão e o Soldado Invernal, onde o escudo está nas mãos de Sam Wilson (Anthony Mackie), após Steve Rogers (Chris Evans) o entregar em Vingadores: Ultimato. Durante a série, Sam aceita seu dever como o novo Capitão América ao lado de Bucky Barnes (Sebastian Stan)."/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar ao menu"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#F1C40F"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
     </LinearLayout>
 </ScrollView>

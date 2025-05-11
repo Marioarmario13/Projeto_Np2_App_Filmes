@@ -80,6 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="© 2025 - Todos os direitos reservados"
+        android:gravity="center_horizontal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:layout_marginTop="130dp"

@@ -5,107 +5,102 @@
     android:background="#010E1A">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Imagem de capa -->
-
-        <!-- Título Recomendacoes -->
-
-        <!-- Texto recomendações -->
-        <ImageView
-            android:id="@+id/imageCapa"
+        <!-- Carrossel de imagens -->
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginBottom="14dp"
-            android:alpha="0.7"
-            android:scaleType="centerCrop"
-            android:src="@drawable/filme01" />
+            android:layout_height="550dp"
+            android:autoStart="true"
+            android:flipInterval="2000"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right">
 
+            <!-- Imagens dentro do ViewFlipper -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/filme01" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/filme02" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/filme03" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/filme04" />
+        </ViewFlipper>
+
+        <!-- Logotipo -->
         <ImageView
             android:id="@+id/logoUniFlix"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-60dp"
-            android:layout_marginBottom="-30dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginBottom="0dp"
             android:contentDescription="Logo UniFlix"
             android:src="@drawable/logotipo" />
+
+        <!-- Texto slogan abaixo da logo -->
+        <TextView
+            android:id="@+id/textViewSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-55dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Filmes, séries e muito mais !"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textRecomendacoes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:text="Recomendações"
+            android:text="Selecione um filme"
             android:textColor="#FFFFFF"
             android:textSize="17sp"
             android:textStyle="bold" />
 
-        <!-- Grade de imagens filmes -->
-        <LinearLayout
-            android:id="@+id/layoutRecomendacoes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:weightSum="3"
-            android:layout_marginTop="8dp">
-
-            <ImageView
-                android:id="@+id/capitaoamerica"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="0dp"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:layout_margin="4dp"
-                android:background="#F1C40F"
-                android:scaleType="centerCrop"
-                android:src="@drawable/filme02" />
-
-            <ImageView
-                android:id="@+id/nosferatu"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="0dp"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:layout_margin="4dp"
-                android:background="#F1C40F"
-                android:scaleType="centerCrop"
-                android:src="@drawable/filme04" />
-
-            <ImageView
-                android:id="@+id/chicobento"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="0dp"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:layout_margin="4dp"
-                android:background="#F1C40F"
-                android:scaleType="centerCrop"
-                android:src="@drawable/filme03" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/tospinner"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#F1C40F"
+            android:text="Selecionar Filme Desejado"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewDireitos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
             android:text="© 2025 - Todos os direitos reservados"
-            android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="0dp"
-            android:textSize="12sp"/>
-
+            android:textSize="12sp" />
     </LinearLayout>
 </ScrollView>
-
-    <!-- Tarefas Pendentes
-         - Mexer na proporção das imagens
-         - Spinner
-         - Funcionalidade diferente (Usuario e Senha - Slide) -->

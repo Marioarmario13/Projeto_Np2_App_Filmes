@@ -1,6 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#010E1A"
     android:padding="16dp">
 
@@ -9,20 +10,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <FrameLayout
+            android:layout_width="400dp"
+            android:layout_height="500dp"
+            android:clipToOutline="true">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
-
-            <!-- Capa do filme  -->
-            <ImageView
-                android:id="@+id/imgCapa"
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imagecapitaoamerica"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="500dp"
+                android:layout_marginBottom="4dp"
+                android:alpha="0.7"
                 android:scaleType="centerCrop"
                 android:src="@drawable/filme04"
-                android:alpha="0.8"/>
+                app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
             <!-- Nota IMDB -->
             <TextView
@@ -39,7 +40,18 @@
                 android:layout_margin="12dp"
                 android:background="@drawable/tag01"
                 android:textSize="14sp" />
-        </RelativeLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nosferatu"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="4dp"
+            android:lineHeight="30dp"/>
 
         <!-- Tags -->
         <LinearLayout
@@ -90,6 +102,18 @@
             android:textSize="14sp"
             android:lineSpacingExtra="4dp"
             android:justificationMode="inter_word"
-            android:text="Uma nova adaptação do clássico do terror, Nosferatu é um conto gótico sobre a obsessão de um terrível vampiro por uma mulher assombrada. A história se passa nos anos de 1800 na Alemanha e acompanha o rico e misterioso Conde Orlok (Bill Skarsgård) na busca por um novo lar. O vendedor de imóveis Thomas Hutter (Nicholas Hoult) fica responsável por conduzir os negócios de Orlok e, então, viaja para as montanhas da Transilvânia para prosseguir com as burocracias da nova propriedade do nobre."/>
+            android:text="A história se passa nos anos de 1800 na Alemanha e acompanha o rico e misterioso Conde Orlok (Bill Skarsgård) na busca por um novo lar. O vendedor de imóveis Thomas Hutter (Nicholas Hoult) fica responsável por conduzir os negócios de Orlok e, então, viaja para as montanhas da Transilvânia para prosseguir com as burocracias da nova propriedade do nobre."/>
+
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar ao menu"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#F1C40F"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
     </LinearLayout>
 </ScrollView>
